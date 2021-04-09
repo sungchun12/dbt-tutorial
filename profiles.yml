@@ -1,0 +1,17 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: fka50167
+
+      # User/password auth
+      user: fishtown_swonchung
+      password: "{{ env_var('SFPASS') }}"
+
+      database: ANALYTICS
+      warehouse: TRANSFORMING
+      schema: dbt_sung
+      threads: 8
+      client_session_keep_alive: True
+      query_tag:
